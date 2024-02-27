@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "Forward",
+      "targetTime": 0
+    },
+    {
+      "name": "Jump",
+      "targetTime": 0.5
+    },
+    {
+      "name": "Compress",
+      "targetTime": 1.2701857806359413
+    }
+  ],
+  "seed": 1657845421
+}
