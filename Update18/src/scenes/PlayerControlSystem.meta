@@ -2,16 +2,56 @@
   "version": 0,
   "timeEvents": [
     {
+      "name": "ShowArray",
+      "targetTime": 0.234941050375134
+    },
+    {
+      "name": "KeyInputs",
+      "targetTime": 3.2791430910123873
+    },
+    {
+      "name": "Pressed",
+      "targetTime": 5.2795691567603615
+    },
+    {
+      "name": "UnPressed",
+      "targetTime": 7.368802147111759
+    },
+    {
+      "name": "InputsTitle",
+      "targetTime": 10.346772034929916
+    },
+    {
+      "name": "Keyboard",
+      "targetTime": 15.147057851292908
+    },
+    {
       "name": "Forward",
-      "targetTime": 0
+      "targetTime": 18.439320653866766
     },
     {
       "name": "Jump",
-      "targetTime": 0.5
+      "targetTime": 21.655915866442683
     },
     {
       "name": "Compress",
-      "targetTime": 1.2701857806359413
+      "targetTime": 25.10642140670711
+    },
+    {
+      "name": "ClientServer",
+      "targetTime": 29.04572115661779
+    },
+    {
+      "name": "MovementCode",
+      "targetTime": 31.421533946900034
+    },
+    {
+      "name": "Expand",
+      "targetTime": 42.85254969601622
+    },
+    {
+      "name": "Bot",
+      "targetTime": 47.050582075590896
     }
   ],
   "seed": 1657845421
