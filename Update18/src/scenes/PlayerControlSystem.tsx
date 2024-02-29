@@ -4,6 +4,7 @@ import {all, createRef, waitUntil, easeInOutCubic, range, makeRef, waitFor, Vect
 import keyboardSvg from '../../images/keyboard-solid.svg';
 import clientSvg from '../../images/computer-solid.svg';
 import serverSvg from '../../images/server-solid.svg';
+import codeFileSvg from '../../images/file-code-solid.svg';
 import botSvg from '../../images/robot-solid.svg';
 
 export default makeScene2D(function* (view) {
@@ -19,9 +20,11 @@ export default makeScene2D(function* (view) {
 
   const keyboard = createRef<Img>();
 
-  const client = createRef<Img>();
-  const server = createRef<Img>();
+  const client = createRef<Node>();
+  const server = createRef<Node>();
   const clientServerLine = createRef<Line>();
+
+  const codeFile = createRef<Img>();
 
   const bot = createRef<Img>();
 
@@ -161,22 +164,42 @@ export default makeScene2D(function* (view) {
         radius={20}
         end={0}
       />
-      <Img
+      <Node 
         ref={client}
-        src={clientSvg}
-        scale={1.5}
         x={600}
         y={-50}
         opacity={0}
-      />
-      <Img
+      >
+        <Img
+          src={clientSvg}
+          scale={1.5}
+        />
+        <Txt
+        y={-150}
+          text={'Client'}
+          fill={'#FFFFFF'}
+          fontSize={80}
+          fontWeight={800}
+        />
+      </Node>
+      <Node 
         ref={server}
-        src={serverSvg}
-        scale={1.5}
         x={-600}
         y={-50}
         opacity={0}
-      />
+      >
+        <Img
+          src={serverSvg}
+          scale={1.5}
+        />
+        <Txt
+        y={-150}
+          text={'Server'}
+          fill={'#FFFFFF'}
+          fontSize={80}
+          fontWeight={800}
+        />
+      </Node>
       <Line
         ref={clientServerLine}
         points={[
@@ -188,6 +211,13 @@ export default makeScene2D(function* (view) {
         radius={20}
         end={0}
         endArrow
+      />
+      <Img
+        ref={codeFile}
+        src={codeFileSvg}
+        scale={1.5}
+        y={-50}
+        opacity={0}
       />
       <Img
         ref={bot}
@@ -299,10 +329,15 @@ export default makeScene2D(function* (view) {
     server().position.x(0, easeInOutCubic(1)),
   );
 
+  yield* all(
+    server().opacity(0, easeInOutCubic(0.5)),
+    codeFile().opacity(1, easeInOutCubic(0.5)),
+  );
+
   yield* waitUntil('Expand')
   
   yield* all(
-    server().opacity(0, easeInOutCubic(0.5)),
+    codeFile().opacity(0, easeInOutCubic(0.5)),
     array.position([400, 0], easeInOutCubic(1)),
   );
   
