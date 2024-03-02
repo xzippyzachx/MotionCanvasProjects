@@ -1,0 +1,42 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "Start",
+      "targetTime": 6.468438974888501
+    },
+    {
+      "name": "States",
+      "targetTime": 13.695699426919127
+    },
+    {
+      "name": "Combat",
+      "targetTime": 17.88305317444474
+    },
+    {
+      "name": "Idle",
+      "targetTime": 23.38957336022538
+    },
+    {
+      "name": "Patrol",
+      "targetTime": 28.403681107477137
+    },
+    {
+      "name": "OOP",
+      "targetTime": 31.571502283382195
+    },
+    {
+      "name": "Flash",
+      "targetTime": 35.241027516661184
+    },
+    {
+      "name": "Patrol2",
+      "targetTime": 41.28336247187631
+    },
+    {
+      "name": "End",
+      "targetTime": 44.28833805106395
+    }
+  ],
+  "seed": 1930099033
+}

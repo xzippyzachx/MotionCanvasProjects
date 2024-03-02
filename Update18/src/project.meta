@@ -3,14 +3,14 @@
   "shared": {
     "background": null,
     "range": [
-      0,
+      4.999999,
       null
     ],
     "size": {
       "x": 1920,
       "y": 1080
     },
-    "audioOffset": -16.012700964630227
+    "audioOffset": -4.8455698463737065
   },
   "preview": {
     "fps": 60,
@@ -23,7 +23,7 @@
     "exporter": {
       "name": "@motion-canvas/ffmpeg",
       "options": {
-        "fastStart": true,
+        "fastStart": false,
         "includeAudio": true
       }
     }

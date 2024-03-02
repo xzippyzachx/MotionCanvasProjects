@@ -232,7 +232,7 @@ export default makeScene2D(function* (view) {
   // Animation
   ////////////////////////////////////////
 
-  yield* waitUntil('ShowArray'),
+  yield* waitUntil('ShowArray')
 
   yield* all(
     arrayBg().opacity(1, easeInOutCubic(0.5)),
@@ -240,18 +240,18 @@ export default makeScene2D(function* (view) {
     ...boolTxt.map(txt => txt.opacity(1, 0.5)),
   );
 
-  yield* waitUntil('KeyInputs'),
+  yield* waitUntil('KeyInputs')
 
   yield* boolLabelTxt.map(line => line.opacity(1, 0.5)),
 
-  yield* waitUntil('Pressed'),
+  yield* waitUntil('Pressed')
 
   yield* all(
     ...boolTxt.map(txt => txt.text('true', easeInOutCubic(0.5))),
     ...boolTxt.map(txt => txt.fill('#25df44', easeInOutCubic(0.5))),
   );
 
-  yield* waitUntil('UnPressed'),
+  yield* waitUntil('UnPressed')
 
   yield* all(
     ...boolTxt.map(txt => txt.text('false', easeInOutCubic(0.5))),
