@@ -18,15 +18,7 @@ export default makeScene2D(function* (view) {
       <Rect
         height={'100%'}
         width={'100%'}
-        fill={() => new Gradient({
-          type: 'radial',
-          fromRadius: 800,
-          toRadius: 1200,
-          stops: [
-            {offset: 0, color: '#0a0a0a'},
-            {offset: 1, color: '#131313'},
-          ],
-        })}
+        fill={'#00FF00'}
       />
     </>
   );

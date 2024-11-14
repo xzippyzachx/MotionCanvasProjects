@@ -36,6 +36,8 @@ export default makeScene2D(function* (view) {
   const client1Line = createRef<Line>();
   const client2Line = createRef<Line>();
   const client3Line = createRef<Line>();
+  const databaseLine = createRef<Line>();
+
 
   const line1 = createRef<Line>();
   const line2 = createRef<Line>();
@@ -285,6 +287,21 @@ export default makeScene2D(function* (view) {
           end={0}
           endArrow
         />
+
+        <Line
+          ref={databaseLine}
+          points={[
+            [0, 50],
+            [0, 150],
+          ]}
+          stroke={'#FFFFFF'}
+          lineWidth={15}
+          radius={20}
+          end={0.5}
+          start={0.5}
+          endArrow
+          startArrow
+        />
           
         <Line
           ref={line1}
@@ -338,6 +355,10 @@ export default makeScene2D(function* (view) {
   yield* waitFor(4)
 
   yield* database().opacity(1, 0.5)
+  yield* all(
+    databaseLine().end(1, 1),
+    databaseLine().start(0, 1),
+  )
 
   yield* waitFor(3)
 
